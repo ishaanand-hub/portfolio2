@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Intro Section -->
+
+    <div id="intro">
+
+        <h1 id="welcome-text">Welcome to My Portfolio</h1>
+
+        <p>I'm Isha, an aspiring JEE student, passionate about learning, technology, and AI. I am dedicated to achieving excellence and making a difference.</p>
+
+    </div>
+
+    <!-- Qualities Section -->
+
+    <div id="qualities">
+
+        <h2>What Defines Me</h2>
+
+        <div class="qualities-container">
+
+            <div class="quality-box">Innovative Thinker</div>
+
+            <div class="quality-box">Persistent Learner</div>
+
+            <div class="quality-box">Creative Problem Solver</div>
+
+            <div class="quality-box">Tech Enthusiast</div>
+
+        </div>
+
+    </div>
+
+    <!-- Contact Section -->
+
+    <div id="contact">
+
+        <div class="contact-header">
+
+            <h2>Get in Touch</h2>
+
+            <p>Feel free to connect with me through the links below!</p>
+
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+
+                <button class="contact-btn" onclick="window.location.href='mailto:ishaanand2488@gmail.com'">
+
+                    <span>📧</span>
+
+                </button>
+
+            </div>
+
+            <div class="contact-card">
+
+                <button class="contact-btn" onclick="window.location.href= 'https://youtube.com/@jeeaspirant028?si=qKS4lpyRlK2VmAHU'">
+
+                    <span>🎥</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Chatbot -->
+
+    <div class="chatbot">
+<!-- Chatbot Section -->
+
+<div class="chatbot">
+<!-- Chatbot Section -->
+<div class="chatbot">
+    <button class="chatbot-button" onclick="toggleChatbot()">Ask Me Anything</button>
+    <div class="chatbot-window">
+        <div class="chatbot-header">
+            <img src="girl-avatar.jpg" alt="Chatbot Avatar" class="chatbot-avatar">
+            <span class="chatbot-name">Chat Assistant</span>
+            <button class="close-chatbot" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <input type="text" id="chatbotInput" placeholder="Type your message...">
+        <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+    <button class="chatbot-button" onclick="toggleChatbot()">Ask Me Anything</button>
+
+    <div class="chatbot-window">
+
+        <div class="chatbot-header">
+
+            <img src="girl-avatar.jpg" alt="Chatbot Avatar" class="chatbot-avatar">
+
+            <span class="chatbot-name">Chat Assistant</span>
+
+            <button class="close-chatbot" onclick="closeChatbot()">×</button>
+
+        </div>
+
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+
+        <input type="text" id="chatbotInput" placeholder="Type your message...">
+
+        <button class="send-button" onclick="sendMessage()">Send</button>
+
+    </div>
+
+</div>
+        <button class="chatbot-button" onclick="openChatbot()">Chat with Me</button>
+
+        <div id="chatbotWindow" class="chatbot-window">
+
+            <button class="close-button" onclick="closeChatbot()">×</button>
+
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+
+            <input type="text" id="chatbotInput" placeholder="Type your message..." />
+
+            <button class="send-button" onclick="sendMessage()">Send</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

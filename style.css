@@ -1,0 +1,477 @@
+/* Basic Reset */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+/* Body and Background */
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #1c1c1c;
+
+    color: #fff;
+
+    overflow-x: hidden;
+
+}
+
+/* Intro Section */
+
+#intro {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background: #000;
+
+}
+
+#intro h1 {
+
+    font-size: 48px;
+
+    color: #00ffff; /* Cyan color */
+
+    animation: fadeIn 3s ease-in-out;
+
+}
+
+#intro p {
+
+    font-size: 18px;
+
+    color: #ccc;
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    line-height: 1.6;
+
+}
+
+/* Quality Section */
+
+#qualities {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #000;
+
+}
+
+#qualities h2 {
+
+    font-size: 36px;
+
+    color: #00ffff; /* Cyan color */
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 40px;
+
+}
+
+.qualities-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+.quality-box {
+
+    background-color: #333;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    width: 180px;
+
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+    animation: glowingEffect 3s ease-in-out infinite alternate;
+
+}
+
+.quality-box:hover {
+
+    transform: scale(1.1);
+
+    background-color: #00ffff; /* Cyan glow on hover */
+
+    box-shadow: 0 0 25px #00ffff;
+
+}
+
+@keyframes glowingEffect {
+
+    0% {
+
+        transform: translateY(0);
+
+        box-shadow: 0 0 15px #00ffff;
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+        box-shadow: 0 0 25px #00ffff;
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+        box-shadow: 0 0 15px #00ffff;
+
+    }
+
+}
+
+/* Contact Section */
+
+#contact {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #1c1c1c;
+
+    position: relative;
+
+}
+
+.contact-header h2 {
+
+    font-size: 36px;
+
+    color: #00ffff;
+
+}
+
+.contact-header p {
+
+    font-size: 18px;
+
+    color: #ccc;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+}
+
+.contact-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+}
+
+.contact-card {
+
+    background-color: #333;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    width: 120px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+    position: relative;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    animation: floatingEffect 3s ease-in-out infinite alternate;
+
+}
+
+.contact-card:hover {
+
+    transform: scale(1.1);
+
+    box-shadow: 0 0 25px #00ffff;
+
+}
+
+.contact-card img {
+
+    width: 50px;
+
+    height: 50px;
+
+    transition: transform 0.3s ease;
+
+}
+
+.contact-card:hover img {
+
+    transform: scale(1.2);
+
+}
+
+/* Chatbot Section */
+
+.chatbot {
+
+    position: fixed;
+
+    bottom: 10px;
+
+    right: 10px;
+
+    z-index: 100;
+
+}
+
+.chatbot-button {
+
+    background-color: #00ffff;
+
+    color: #fff;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: transform 0.3s ease;
+
+}
+
+.chatbot-button:hover {
+
+    transform: scale(1.1);
+
+    box-shadow: 0 0 10px #00ffff;
+
+}
+
+.chatbot-window {
+
+    display: none;
+
+    background-color: #333;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    width: 300px;
+
+    position: absolute;
+
+    bottom: 70px;
+
+    right: 0;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+    z-index: 999;
+
+}
+
+.close-button {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    font-size: 24px;
+
+    color: #fff;
+
+    background-color: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+.close-button:hover {
+
+    color: #00ffff;
+
+    transform: scale(1.2);
+
+}
+
+.chatbot-messages {
+
+    height: 200px;
+
+    overflow-y: auto;
+
+    margin-bottom: 10px;
+
+}
+
+.chatbot-message {
+
+    padding: 10px;
+
+    background-color: #444;
+
+    border-radius: 10px;
+
+    margin: 5px 0;
+
+    color: #fff;
+
+}
+
+.chatbot-message.bot {
+
+    background-color: #555;
+}
+
+
+/* Chatbot Input */
+#chatbotInput {
+    width: 100%;
+    padding: 12px 20px;  /* Increased padding for a better look */
+    border-radius: 20px;  /* Rounded corners for a softer look */
+    border: 2px solid #00ffff;  /* Cyan border for a more polished look */
+    background-color: #222;  /* Dark background for better contrast */
+    color: #fff;  /* White text color for better readability */
+    font-size: 16px;  /* Adjust font size */
+    font-family: 'Roboto', sans-serif;  /* Clean and modern font */
+    outline: none;  /* Removes the default outline */
+    transition: all 0.3s ease;  /* Smooth transition for changes */
+}
+
+/* Focus Effect for Chat Input */
+#chatbotInput:focus {
+    border-color: #00b3b3;  /* Slightly darker cyan when focused */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);  /* Soft cyan glow */
+}
+
+/* Placeholder text style */
+#chatbotInput::placeholder {
+    color: #bbb;  /* Lighter color for the placeholder */
+    font-style: italic;  /* Italic placeholder text */
+}
+
+/* Hover effect for the input field */
+#chatbotInput:hover {
+    border-color: #00ffff;  /* Cyan border on hover */
+}
+.send-button {
+
+    background-color: #00ffff;
+
+    color: #fff;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+}
+
+.send-button:hover {
+
+    background-color: #ff4081;
+
+}
+
+/* Animation for Chatbot */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes fadeInText {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateY(-50px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* Animation for Welcome Text */
+
+#welcome-text {
+
+    animation: fadeInText 2s ease-in-out;
+
+}
